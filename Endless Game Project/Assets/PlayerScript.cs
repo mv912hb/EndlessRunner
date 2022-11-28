@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    public Rigidbody rb;
+    Rigidbody rb;
+
+    private void Awake() 
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
     void Start()
     {
@@ -17,11 +22,14 @@ public class PlayerScript : MonoBehaviour
     }
 
     private void FixedUpdate() 
-    {
-        rb.AddForce(0, 0, 1000 * Time.deltaTime);   
+    {      
         if (Input.GetKey((KeyCode.D)) || Input.GetKey(KeyCode.RightArrow)) 
         {
-            rb.transform.Translate(0.3f, 0, 0);
+            rb.AddForce(10, 0, 0);
+        }
+        if (Input.GetKey((KeyCode.A)) || Input.GetKey(KeyCode.LeftArrow)) 
+        {
+            rb.AddForce(-10, 0, 0);
         }
     }
 }
