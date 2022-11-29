@@ -25,11 +25,15 @@ public class PlayerScript : MonoBehaviour
     {      
         if (Input.GetKey((KeyCode.D)) || Input.GetKey(KeyCode.RightArrow)) 
         {
-            rb.AddForce(10, 0, 0);
+            rb.AddForce(20, 0, 0);
         }
         if (Input.GetKey((KeyCode.A)) || Input.GetKey(KeyCode.LeftArrow)) 
         {
-            rb.AddForce(-10, 0, 0);
+            rb.AddForce(-20, 0, 0);
+        }
+                if (Input.GetKey((KeyCode.W)) || Input.GetKey(KeyCode.UpArrow)) 
+        {
+            rb.AddForce(0, 0, 20);
         }
     }
 }
