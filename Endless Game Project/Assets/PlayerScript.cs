@@ -31,9 +31,13 @@ public class PlayerScript : MonoBehaviour
         {
             rb.AddForce(-20, 0, 0);
         }
-                if (Input.GetKey((KeyCode.W)) || Input.GetKey(KeyCode.UpArrow)) 
+        if (Input.GetKey((KeyCode.W)) || Input.GetKey(KeyCode.UpArrow)) 
         {
             rb.AddForce(0, 0, 20);
+        }
+        if (Input.GetKey((KeyCode.S)) || Input.GetKey(KeyCode.DownArrow)) 
+        {
+            rb.AddForce(0, 0, -20);
         }
     }
 }
