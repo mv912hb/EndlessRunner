@@ -39,5 +39,9 @@ public class PlayerScript : MonoBehaviour
         {
             rb.AddForce(0, 0, -20);
         }
+        if (Input.GetKey((KeyCode.Space)) || Input.GetKey(KeyCode.J)) 
+        {
+            rb.AddForce(0, 15, 0);
+        }
     }
 }
