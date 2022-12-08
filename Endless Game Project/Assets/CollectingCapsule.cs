@@ -14,10 +14,6 @@ public class CollectingCapsule : MonoBehaviour
             capsules += 1;
             capsule.gameObject.SetActive(false);
         }    
-        if (capsule.gameObject.tag == "Obstacle") 
-        {
-            Debug.Log("Collision with obstacle!");
-        }
     }
 
     void Start()
