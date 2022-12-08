@@ -8,12 +8,16 @@ public class CollectingCapsule : MonoBehaviour
 
     private void OnTriggerEnter(Collider capsule) 
     {
-        if(capsule.gameObject.tag == "Capsule")
+        if (capsule.gameObject.tag == "Capsule")
         {
             Debug.Log("Collected!");
             capsules += 1;
             capsule.gameObject.SetActive(false);
         }    
+        if (capsule.gameObject.tag == "Obstacle") 
+        {
+            Debug.Log("Collision with obstacle!");
+        }
     }
 
     void Start()
